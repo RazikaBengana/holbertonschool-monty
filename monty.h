@@ -1,15 +1,16 @@
 #ifndef MONTY_H_
 #define MONTY_H_
 
+#define EXIT_FAILURE 1;
+
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <limits.h>
 #include <string.h>
+#include <ctype.h>
 #include "monty.h"
-
-stack_s *top = NULL; // dùng biến top để kiểm soát Stack
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -41,5 +42,5 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void Push(int n);
+void _push(stack_t **stack, unsigned int line_number);
 #endif
