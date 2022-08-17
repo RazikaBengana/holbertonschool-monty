@@ -6,7 +6,7 @@
  * @top_stack: pointer to the top of the stack
  */
 
-void readFile(char *filename, toy_stack_t **top_stack)
+void readFile(char *filename, stack_t **top_stack)
 {
 	char *line;
 	size_t i = 0;

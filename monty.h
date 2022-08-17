@@ -1,7 +1,7 @@
 #ifndef MONTY_H_
 #define MONTY_H_
 
-#define EXIT_FAILURE 1;
+#define EXIT_FAILURE 1
 
 #include <stdio.h>
 #include <unistd.h>
@@ -19,12 +19,12 @@ extern int push_arg;
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-typedef struct toy_stack_s
+typedef struct stack_s
 {
-        int n;
-        struct toy_stack_s *prev;
-        struct toy_stack_s *next;
-} toy_stack_t;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
+} stack_t;
 
 /**
  * struct instruction_s - opcode and its function
@@ -36,8 +36,8 @@ typedef struct toy_stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(toy_stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
@@ -57,11 +57,10 @@ typedef struct global_variable
 
 extern global_var var_global;
 
-
-void readFile(char *filename, toy_stack_t **top_stack);
-char *get_line(char *line, toy_stack_t **stack, unsigned int line_number);
+void readFile(char *filename, stack_t **top_stack);
+char *get_line(char *line, stack_t **stack, unsigned int line_number);
 int _isnumber(char *str);
-typedef void (*instruct_func)(toy_stack_t **stack, unsigned int line_number);
+typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
 instruct_func get_opcode(char *str);
-void _push(toy_stack_t **stack, unsigned int line_number);
+void _push(stack_t **stack, unsigned int line_number);
 #endif
