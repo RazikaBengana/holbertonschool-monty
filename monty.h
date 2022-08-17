@@ -2,6 +2,7 @@
 #define MONTY_H_
 
 #define EXIT_FAILURE 1
+#define UNUSED(x) (void)(x)
 
 #include <stdio.h>
 #include <unistd.h>
@@ -11,7 +12,7 @@
 
 extern int push_arg;
 /**
- * struct stack_s - doubly linked list representation of a stack (or queue)
+ * struct toy_stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
@@ -58,9 +59,10 @@ typedef struct global_variable
 extern global_var var_global;
 
 void readFile(char *filename, stack_t **top_stack);
-char *get_line(char *line, stack_t **stack, unsigned int line_number);
+char *parse_file(char *line, stack_t **stack, unsigned int line_number);
 int _isnumber(char *str);
 typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
 instruct_func get_opcode(char *str);
-void _push(stack_t **stack, unsigned int line_number);
+void _push(stack_t **head_stack, unsigned int line_number);
+void _pall(stack_t **head_stack, unsigned int line_number);
 #endif

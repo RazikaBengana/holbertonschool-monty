@@ -1,13 +1,14 @@
 #include "monty.h"
 /**
  * _push - push int to a stack
- * @head_stack: linked lists for monty stack
- * @line_number: number of line opcode occurs on
+ * @head_stack: pointer to begin list
+ * @line_number: number of line option code
  */
 void _push(stack_t **head_stack, unsigned int line_number)
 {
 	stack_t *new_node;
-	(void)line_number;
+
+	UNUSED(line_number);
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)

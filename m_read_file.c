@@ -24,7 +24,7 @@ void readFile(char *filename, stack_t **top_stack)
 
 	while ((read_file = getline(&var_global.buffer, &i, var_global.file)) != -1)
 	{
-		line = get_line(var_global.buffer, top_stack, countLine);
+		line = parse_file(var_global.buffer, top_stack, countLine);
 		if ((line == NULL || line[0] == '#'))
 		{
 			countLine++;

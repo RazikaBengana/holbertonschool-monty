@@ -8,12 +8,12 @@ instruct_func get_opcode(char *str)
 {
 	int i;
 	instruction_t instruct[] = {
-	    {"push", _push},
-	/*     {"pall", _pall}, */
+	{"push", _push},
+	{"pall", _pall},
 	  /*  {"pint", _pint}, */
 	  /*  {"pop",  _pop}, */
 	   /* {"swap", _swap}, */
-	    {NULL, NULL}};
+	{NULL, NULL}};
 
 	i = 0;
 	while (instruct[i].f != NULL && strcmp(instruct[i].opcode, str) != 0)
