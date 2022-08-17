@@ -7,7 +7,7 @@
  */
 int main(int argc, char **argv)
 {
-     stack_t *top;
+     toy_stack_t *top;
 
      top = NULL; /* control stack */
      if (argc != 2)
@@ -15,5 +15,6 @@ int main(int argc, char **argv)
           fprintf(stderr, "USAGE: monty file\n");
           exit(EXIT_FAILURE);
      }
-     _push();
+     readFile(argv[1], &top);
+     return (0);   
 }
