@@ -1,4 +1,8 @@
 #include "monty.h"
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
 /**
  * _push - push int to a stack
  * @head_stack: pointer to begin list
@@ -13,10 +17,11 @@ void _push(char *str, stack_t **head_stack, unsigned int line_number)
 	UNUSED(line_number);
 
 	new_node = malloc(sizeof(stack_t));
-	if (new_node == NULL)
+	if (new_node != NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
+		return;
 	}
 	if (_isnumber(str) == 1 && str != NULL)
 	{

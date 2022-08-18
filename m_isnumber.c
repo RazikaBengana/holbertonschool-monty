@@ -1,4 +1,8 @@
 #include "monty.h"
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
 /**
  * _isnumber - check string is number
  *

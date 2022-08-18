@@ -5,13 +5,10 @@
 #define UNUSED(x) (void)(x)
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h> 
 
-extern int push_arg;
+
 /**
- * struct toy_stack_s - doubly linked list representation of a stack (or queue)
+ * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
@@ -48,9 +45,6 @@ typedef struct instruction_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
-
-
-extern int var_global;
 
 void readFile(FILE *filename, stack_t **top_stack);
 int _isnumber(char *str);

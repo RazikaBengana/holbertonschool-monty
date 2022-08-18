@@ -1,4 +1,6 @@
 #include "monty.h"
+#include <stdlib.h>
+#include <string.h>
 /**
  * main - driver fuction for monty program
  * @argc: int num of argument
@@ -9,8 +11,9 @@ int main(int argc, char **argv)
 {
 	FILE *file;
 	char *argvName;
-	stack_t *topStack;
-	
+	stack_t *topStack = NULL;
+	stack_t *freeMemo;
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -25,6 +28,8 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	readFile(file, &topStack);
+	freeMemo = topStack;
+	free(freeMemo);
 	fclose(file);
 	return (0);
 }

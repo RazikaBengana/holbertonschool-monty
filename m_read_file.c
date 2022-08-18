@@ -1,4 +1,7 @@
 #include "monty.h"
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 /**
  * readFile - read bytecode file
  *

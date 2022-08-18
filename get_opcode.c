@@ -1,4 +1,7 @@
 #include "monty.h"
+#include <stdlib.h>
+#include <string.h>
+
 /**
  *get_opcode - select the function
  *@opcode: the option code
