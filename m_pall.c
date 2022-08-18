@@ -10,7 +10,7 @@ void _pall(stack_t **head_stack, unsigned int line_number)
 	int index = 0;
 	stack_t *cursor;
 	cursor = *head_stack;
-
+ 
 	UNUSED(line_number);
 	while (cursor)
 	{

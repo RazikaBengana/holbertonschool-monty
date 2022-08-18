@@ -7,14 +7,24 @@
  */
 int main(int argc, char **argv)
 {
-	stack_t *top;
-
-	top = NULL; /* control stack */
+	FILE *file;
+	char *argvName;
+	stack_t *topStack;
+	
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	readFile(argv[1], &top);
+
+	argvName = argv[1];
+	file = fopen(argvName, "r");
+	if (file == NULL)
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", argvName);
+		exit(EXIT_FAILURE);
+	}
+	readFile(file, &topStack);
+	fclose(file);
 	return (0);
 }
