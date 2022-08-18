@@ -13,7 +13,7 @@ void readFile(FILE *filename, stack_t **top_stack)
 {
 	char *line;
 	size_t i = 0;
-	int countLine = 1;
+	int countLine = 0;
 	ssize_t read_file;
 
 
