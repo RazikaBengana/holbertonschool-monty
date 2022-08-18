@@ -3,7 +3,9 @@
  * _push - push int to a stack
  * @head_stack: pointer to begin list
  * @line_number: number of line option code
+ * @str: the pointer to the string
  */
+
 void _push(char *str, stack_t **head_stack, unsigned int line_number)
 {
 	stack_t *new_node;
@@ -21,7 +23,6 @@ void _push(char *str, stack_t **head_stack, unsigned int line_number)
 		new_node->n = atoi(str);
 		new_node->next = *head_stack;
 		new_node->prev = NULL;
-	
 	}
 	if (*head_stack != NULL)
 		(*head_stack)->prev = new_node;
