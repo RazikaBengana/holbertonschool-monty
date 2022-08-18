@@ -14,7 +14,6 @@ void readFile(FILE *filename, stack_t **top_stack)
 	char *line;
 	size_t i = 0;
 	int countLine = 1;
-	int line_number = 0;
 	ssize_t read_file;
 
 
@@ -32,10 +31,10 @@ void readFile(FILE *filename, stack_t **top_stack)
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\n ");
-			_push(token, top_stack, line_number);
+			_push(token, top_stack, countLine);
 		}
 		else
-			get_opcode(token, top_stack, line_number);
+			get_opcode(token, top_stack, countLine);
 	}
 	free(line);
 }
