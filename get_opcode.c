@@ -4,11 +4,10 @@
  *@str : the opcode
  *Return: returns a fuctions, or NULL on failure
  */
-instruct_func get_opcode(char *str)
+void get_opcode(char *opcode, stack_t **stack, unsigned int lineNb)
 {
-	int i;
+	int i = 0;
 	instruction_t instruct[] = {
-	{"push", _push},
 	{"pall", _pall},
 	  /*  {"pint", _pint}, */
 	  /*  {"pop",  _pop}, */
@@ -16,9 +15,18 @@ instruct_func get_opcode(char *str)
 	{NULL, NULL}};
 
 	i = 0;
-	while (instruct[i].f != NULL && strcmp(instruct[i].opcode, str) != 0)
+	while (instruct[i].opcode)
 	{
+		if (strcmp(instruct[i].opcode, opcode) == 0)
+		{
+			instruct[i].f(stack, lineNb);
+			break;
+		}
 		i++;
 	}
-	return (instruct[i].f);
+	if (instruct[i].opcode == NULL)
+	{
+		fprintf(stderr, "L%d: unknown instruction %s\n", lineNb, opcode);
+		exit(EXIT_FAILURE);
+	}
 }

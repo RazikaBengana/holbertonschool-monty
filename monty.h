@@ -5,10 +5,9 @@
 #define UNUSED(x) (void)(x)
 
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
+#include <ctype.h> 
 
 extern int push_arg;
 /**
@@ -49,20 +48,13 @@ typedef struct instruction_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
-typedef struct global_variable
-{
-	FILE *file;
-	int push_arg;
-	char *buffer;
-} global_var;
 
-extern global_var var_global;
 
-void readFile(char *filename, stack_t **top_stack);
-char *parse_file(char *line, stack_t **stack, unsigned int line_number);
+extern int var_global;
+
+void readFile(FILE *filename, stack_t **top_stack);
 int _isnumber(char *str);
-typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
-instruct_func get_opcode(char *str);
-void _push(stack_t **head_stack, unsigned int line_number);
+void get_opcode(char *str, stack_t **stack, unsigned int lineNb);
+void _push(char *str, stack_t **head_stack, unsigned int line_number);
 void _pall(stack_t **head_stack, unsigned int line_number);
 #endif

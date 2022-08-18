@@ -6,42 +6,33 @@
  * @top_stack: pointer to the top of the stack
  */
 
-void readFile(char *filename, stack_t **top_stack)
+void readFile(FILE *filename, stack_t **top_stack)
 {
 	char *line;
 	size_t i = 0;
 	int countLine = 1;
-	instruct_func s;
-	int check_file, read_file;
+	int line_number = 0;
+	ssize_t read_file;
+
+
+	char *token = NULL;
 
 	/* open file bytecode */
-	var_global.file = fopen(filename, "r");
-	if (var_global.file == NULL)
-	{
-		fprintf(stderr, "Error: Can't open file %s\n", filename);
-		exit(EXIT_FAILURE);
-	}
 
-	while ((read_file = getline(&var_global.buffer, &i, var_global.file)) != -1)
+	while ((read_file = getline(&line, &i, filename)) != -1)
 	{
-		line = parse_file(var_global.buffer, top_stack, countLine);
-		if ((line == NULL || line[0] == '#'))
-		{
-			countLine++;
-			continue;
-		}
-
-		s = get_opcode(line);
-		if (s == NULL)
-		{
-			fprintf(stderr, "L%d: unknown instruction %s\n", countLine, line);
-			exit(EXIT_FAILURE);
-		}
-		s(top_stack, countLine);
 		countLine++;
+		token = strtok(line, "\n ");
+		if (token == NULL || strncmp(token, "#", 1) == 0)
+			continue;
+
+		if (strcmp(token, "push") == 0)
+		{
+			token = strtok(NULL, "\n ");
+			_push(token, top_stack, line_number);
+		}
+		else
+			get_opcode(token, top_stack, line_number);
 	}
-	free(var_global.buffer);
-	check_file = fclose(var_global.file);
-	if (check_file == -1)
-		exit(-1);
+	free(line);
 }
