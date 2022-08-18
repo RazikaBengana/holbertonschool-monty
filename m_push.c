@@ -10,13 +10,13 @@
  * @str: the pointer to the string
  */
 
-void _push(char *str, stack_t **head_stack, unsigned int line_number)
+void _push(char *str, toy_stack_t **head_stack, unsigned int line_number)
 {
-	stack_t *new_node;
+	toy_stack_t *new_node;
 
 	UNUSED(line_number);
 
-	new_node = malloc(sizeof(stack_t));
+	new_node = malloc(sizeof(toy_stack_t));
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
@@ -28,6 +28,11 @@ void _push(char *str, stack_t **head_stack, unsigned int line_number)
 		new_node->n = atoi(str);
 		new_node->next = *head_stack;
 		new_node->prev = NULL;
+	}
+	else 
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+			exit(EXIT_FAILURE);
 	}
 	if (*head_stack != NULL)
 		(*head_stack)->prev = new_node;
