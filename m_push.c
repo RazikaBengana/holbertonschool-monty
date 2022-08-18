@@ -14,8 +14,6 @@ void _push(char *str, stack_t **head_stack, unsigned int line_number)
 {
 	stack_t *new_node;
 
-	UNUSED(line_number);
-
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
@@ -34,6 +32,7 @@ void _push(char *str, stack_t **head_stack, unsigned int line_number)
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			exit(EXIT_FAILURE);
 	}
+	
 	if (*head_stack != NULL)
 		(*head_stack)->prev = new_node;
 	*head_stack = new_node;

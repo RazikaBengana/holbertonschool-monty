@@ -16,11 +16,11 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-typedef struct stack_s
+typedef struct toy_stack_s
 {
 	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
+	struct toy_stack_s *prev;
+	struct toy_stack_s *next;
 } stack_t;
 
 /**
@@ -45,10 +45,9 @@ typedef struct instruction_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
-
 void readFile(FILE *filename, stack_t **top_stack);
 int _isnumber(char *str);
-void get_opcode(char *str, stack_t **stack, unsigned int lineNb);
+void get_opcode(char *opcode, stack_t **stack, unsigned int lineNb);
 void _push(char *str, stack_t **head_stack, unsigned int line_number);
 void _pall(stack_t **head_stack, unsigned int line_number);
 #endif

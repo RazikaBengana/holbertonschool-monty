@@ -9,7 +9,7 @@
  *@lineNb: line number
  *Return: returns a fuctions, or NULL on failure
  */
-void get_opcode(char *opcode, stack_t **stack, unsigned int lineNb)
+void get_opcode(char *opcode, toy_stack_t **stack, unsigned int lineNb)
 {
 	int i = 0;
 	instruction_t instruct[] = {

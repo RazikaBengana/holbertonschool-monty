@@ -13,6 +13,7 @@ int main(int argc, char **argv)
 	char *argvName;
 	stack_t *topStack = NULL;
 	stack_t *freeMemo;
+	int i = 0;
 
 	if (argc != 2)
 	{
@@ -28,8 +29,6 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	readFile(file, &topStack);
-	freeMemo = topStack;
-	free(freeMemo);
 	fclose(file);
 	return (0);
 }

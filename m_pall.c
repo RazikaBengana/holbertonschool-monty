@@ -5,10 +5,10 @@
  * @line_number:number of line option code
  * Return: index nombre node
  */
-void _pall(stack_t **head_stack, unsigned int line_number)
+void _pall(toy_stack_t **head_stack, unsigned int line_number)
 {
 	int index = 0;
-	stack_t *cursor;
+	toy_stack_t *cursor;
 
 	cursor = *head_stack;
 
