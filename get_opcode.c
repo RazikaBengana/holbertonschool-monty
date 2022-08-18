@@ -1,7 +1,9 @@
 #include "monty.h"
 /**
- *get_op_func - select the function
- *@str : the opcode
+ *get_opcode - select the function
+ *@opcode: the option code
+ *@stack: the stack
+ *@lineNb: line number
  *Return: returns a fuctions, or NULL on failure
  */
 void get_opcode(char *opcode, stack_t **stack, unsigned int lineNb)
