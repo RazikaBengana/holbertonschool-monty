@@ -6,14 +6,13 @@
  */
 void _pint(stack_t **head_stack, unsigned int line_number)
 {
-	int index = 0;
 	stack_t *cursor;
+	UNUSED(line_number);
 
 	cursor = *head_stack;
 
 		if (cursor == NULL || *cursor == NULL)
 		{
-
 			printf("L%d: can't pint, stack empty\n", line_number);
 			exit(EXIT_FAILURE);
 		}
