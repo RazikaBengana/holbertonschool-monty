@@ -27,7 +27,7 @@ void _push(char *str, stack_t **head_stack, unsigned int line_number)
 		new_node->next = *head_stack;
 		new_node->prev = NULL;
 	}
-	else 
+	else
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			exit(EXIT_FAILURE);
