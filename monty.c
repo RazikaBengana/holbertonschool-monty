@@ -12,8 +12,6 @@ int main(int argc, char **argv)
 	FILE *file;
 	char *argvName;
 	stack_t *topStack = NULL;
-	stack_t *freeMemo;
-	int i = 0;
 
 	if (argc != 2)
 	{
