@@ -11,19 +11,15 @@ void _pint(stack_t **head_stack, unsigned int line_number)
 
 	cursor = *head_stack;
 
-	UNUSED(line_number);
-	while (cursor)
-	{
-		if (cursor != NULL)
+		if (cursor == NULL || *cursor == NULL)
 		{
-			printf("L%d: can't pint, stack empty\n", cursor->n);
+
+			printf("L%d: can't pint, stack empty\n", line_number);
 			exit(EXIT_FAILURE);
 		}
 		else
 		{
 			printf("%d\n", cursor->n);
 		}
-		index++;
-		cursor = cursor->next;	
 	}
 }
