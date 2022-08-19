@@ -10,20 +10,24 @@ void _pint(stack_t **head_stack, unsigned int line_number)
 	stack_t *cursor;
 
 	cursor = *head_stack;
-
+	printf("curesor/%d\n", cursor->n);
 	UNUSED(line_number);
+	if (cursor == NULL)
+	{
+		printf("hello");
+			exit(EXIT_FAILURE);
+	}
+	else
+	{
 	while (cursor)
 	{
+		printf("hello\n");
 		if (cursor != NULL)
-		{
-			printf("L%d: can't pint, stack empty\n", cursor->n);
-			exit(EXIT_FAILURE);
-		}
-		else
 		{
 			printf("%d\n", cursor->n);
 		}
 		index++;
 		cursor = cursor->next;	
+	}
 	}
 }
