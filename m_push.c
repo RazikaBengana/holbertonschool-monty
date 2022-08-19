@@ -32,7 +32,7 @@ void _push(char *str, stack_t **head_stack, unsigned int line_number)
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			exit(EXIT_FAILURE);
 	}
-	
+	void free_memory(new_node);
 	if (*head_stack != NULL)
 		(*head_stack)->prev = new_node;
 	*head_stack = new_node;

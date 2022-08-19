@@ -50,4 +50,5 @@ int _isnumber(char *str);
 void get_opcode(char *opcode, stack_t **stack, unsigned int lineNb);
 void _push(char *str, stack_t **head_stack, unsigned int line_number);
 void _pall(stack_t **head_stack, unsigned int line_number);
+void free_memory(stack_t *head);
 #endif

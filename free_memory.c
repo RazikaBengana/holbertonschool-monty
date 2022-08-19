@@ -5,7 +5,6 @@
  */
 void free_memory(stack_t *head)
 {
-     stack_t h;
      stack_t *tmp;
 
      while (head != NULL)
