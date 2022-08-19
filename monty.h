@@ -55,4 +55,5 @@ void free_memory(stack_t *head);
 void _push(char *str, stack_t **head_stack, unsigned int line_number);
 void _pall(stack_t **head_stack, unsigned int line_number);
 void _pint(stack_t **head_stack, unsigned int line_number);
+void _pop(stack_t **head_stack, unsigned int line_number);
 #endif
