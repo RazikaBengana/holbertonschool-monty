@@ -16,14 +16,14 @@ void _pint(stack_t **head_stack, unsigned int line_number)
 	{
 		if (cursor != NULL)
 		{
-			printf("%d\n", cursor->n);
-		cursor = cursor->next;
-		}
-		else
-		{
 			printf("L%d: can't pint, stack empty\n", cursor->n);
 			exit(EXIT_FAILURE);
 		}
+		else
+		{
+			printf("%d\n", cursor->n);
+		}
 		index++;
+		cursor = cursor->next;	
 	}
 }
