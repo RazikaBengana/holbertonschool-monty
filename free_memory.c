@@ -13,5 +13,4 @@ void free_memory(stack_t *head)
           free(head);
           head = tmp;
      }
-     
 }

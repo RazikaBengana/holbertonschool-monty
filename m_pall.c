@@ -8,7 +8,7 @@
 void _pall(stack_t **head_stack, unsigned int line_number)
 {
 	int index = 0;
-	toy_stack_t *cursor;
+	stack_t *cursor;
 
 	cursor = *head_stack;
 
