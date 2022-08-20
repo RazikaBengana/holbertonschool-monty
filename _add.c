@@ -32,7 +32,7 @@ void _add(stack_t **stack, unsigned int line_number)
 
 		result = a + b;
 
-		pop(stack, line_number);
+		_pop(stack, line_number);
 
 		(*stack)->n = result;
 	}
