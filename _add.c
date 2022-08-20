@@ -6,19 +6,34 @@
  */
 void _add(stack_t **stack, unsigned int line_number)
 {
-	stack_t *cursor;
+	int a;
+	int b;
+	int result;
+	stack_t *current;
+	unsigned int n; /* counter for number of elements */
 
-	cursor = *stack;
-
-	if (!*stack || !(*stack)->next)
-
+	current = *stack;
+	n = 0;
+	while (current != NULL)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		current = current->next;
+		n++;
+	}
+
+	if (n < 2)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	else
 	{
-		cursor->next = *stack;
-		*stack = cursor;
+		a = (*stack)->n;
+		b = (*stack)->next->n;
+
+		result = a + b;
+
+		pop(stack, line_number);
+
+		(*stack)->n = result;
 	}
 }
