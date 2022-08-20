@@ -6,7 +6,6 @@
  */
 void _add(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp;
 	stack_t *cursor;
 
 	cursor = *stack;
