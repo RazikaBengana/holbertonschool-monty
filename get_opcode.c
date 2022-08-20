@@ -18,7 +18,7 @@ void get_opcode(char *opcode, stack_t **stack, unsigned int lineNb)
 	{"pop",  _pop},
 	{"swap", _swap},
 	{"nop", _nop},
-	{NULL, NULL};
+	{NULL, NULL}};
 
 	i = 0;
 	while (instruct[i].opcode)
