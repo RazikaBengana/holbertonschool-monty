@@ -1,23 +1,310 @@
-## 0x18. C - Stacks, Queues - LIFO, FIFO
-  <h4 class="task">
-    0. push, pall
-      <span class="alert alert-warning mandatory-optional">
-        mandatory
-      </span>
-  </h4>
+<div align="center">
+<br>
+
+![Monty.png](README-images/monty.png)
+
+</div>
 
 
-  <!-- Progress vs Score -->
+<p align="center">
+<img src="https://img.shields.io/badge/-C-yellow">
+<img src="https://img.shields.io/badge/-Linux-lightgrey">
+<img src="https://img.shields.io/badge/-WSL-brown">
+<img src="https://img.shields.io/badge/-Ubuntu%2020.04.4%20LTS-orange">
+<img src="https://img.shields.io/badge/-JetBrains-blue">
+<img src="https://img.shields.io/badge/-Holberton%20School-red">
+<img src="https://img.shields.io/badge/License-not%20specified-brightgreen">
+</p>
 
-<!-- Task Body -->
-  <p>Implement the <code>push</code> and <code>pall</code> opcodes.</p>
 
-<p><strong>Monty byte code files</strong></p>
+<h1 align="center"> C - Stacks, Queues - LIFO, FIFO </h1>
 
-<p>Files containing Monty byte codes usually have the <code>.m</code> extension. Most of the industry uses this standard but it is not required by the specification of the language.
-There is not more than one instruction per line. There can be any number of spaces before or after the opcode and its argument:</p>
 
-<pre><code>julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ cat -e bytecodes/000.m
+<h3 align="center">
+<a href="https://github.com/RazikaBengana/holbertonschool-monty#eye-about">About</a> •
+<a href="https://github.com/RazikaBengana/holbertonschool-monty#hammer_and_wrench-tasks">Tasks</a> •
+<a href="https://github.com/RazikaBengana/holbertonschool-monty#memo-learning-objectives">Learning Objectives</a> •
+<a href="https://github.com/RazikaBengana/holbertonschool-monty#computer-requirements">Requirements</a> •
+<a href="https://github.com/RazikaBengana/holbertonschool-monty#keyboard-more-info">More Info</a> •
+<a href="https://github.com/RazikaBengana/holbertonschool-monty#mag_right-resources">Resources</a> •
+<a href="https://github.com/RazikaBengana/holbertonschool-monty#bust_in_silhouette-authors">Authors</a> •
+<a href="https://github.com/RazikaBengana/holbertonschool-monty#octocat-license">License</a>
+</h3>
+
+---
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+<br>
+<br>
+
+## :eye: About
+
+<br>
+
+<div align="center">
+
+**`C - stacks, Queues - LIFO, FIFO`** project is a collaborative group assignment that involves creating a stack-based interpreter for `Monty ByteCodes` files.
+<br>
+It requires to implement a program that can read and execute various stack operations like `push`, `pop`, `swap`, and arithmetic operations defined in Monty ByteCodes instructions.
+<br>
+The project challenges to handle error conditions, manage memory efficiently, and work with linked list data structures to represent and manipulate the stack.
+<br>
+<br>
+This project has been created by **[Holberton School](https://www.holbertonschool.com/about-holberton)** to enable every student to understand how `Stacks` & `Queues` in C language work.
+
+</div>
+
+<br>
+<br>
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+## :hammer_and_wrench: Tasks
+
+<br>
+
+**`0. push, pall`**
+
+**`1. pint`**
+
+**`2. pop`**
+
+**`3. swap`**
+
+**`4. add`**
+
+**`5. nop`**
+
+**`6. sub`**
+
+**`7. div`**
+
+**`8. mul`**
+
+**`9. mod`**
+
+**`10. comments`**
+
+**`11. pchar`**
+
+**`12. pstr`**
+
+**`13. rotl`**
+
+**`14. rotr`**
+
+**`15. stack, queue`**
+
+**`16. Brainf*ck`**
+
+**`17. Add two digits`**
+
+**`18. Multiplication`**
+
+**`19. Multiplication level up`**
+
+<br>
+<br>
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+## :memo: Learning objectives
+
+<br>
+
+**_You are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), without the help of Google:_**
+
+<br>
+
+```diff
+
+General
+
++ What do LIFO and FIFO mean
+
++ What is a stack, and when to use it
+
++ What is a queue, and when to use it
+
++ What are the common implementations of stacks and queues
+
++ What are the most common use cases of stacks and queues
+
++ What is the proper way to use global variables
+
+```
+
+<br>
+<br>
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+## :computer: Requirements
+
+<br>
+
+```diff
+
+General
+
++ Allowed editors: vi, vim, emacs
+
++ All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic
+
++ All your files should end with a new line
+
++ A README.md file, at the root of the folder of the project is mandatory
+
++ Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+
++ You are allowed to use a maximum of one global variable
+
++ No more than 5 functions per file
+
++ You are allowed to use the C standard library
+
++ The prototypes of all your functions should be included in your header file called monty.h
+
++ Don’t forget to push your header file
+
++ All your header files should be include guarded
+
++ You are expected to do the tasks in the order shown in the project
+
+```
+
+<br>
+
+**_Why all your files should end with a new line? See [HERE](https://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file/18789)_**
+
+<br>
+<br>
+
+### GitHub
+
+<br>
+
+There should be one project repository per group. <br>
+If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.
+
+<br>
+<br>
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+
+## :keyboard: More Info
+
+<br>
+
+### Data structures:
+
+<br>
+
+- Please use the following data structures for this project (don’t forget to include them in your header file):
+
+<br>
+
+```yaml
+/**
+ * struct stack_s - doubly linked list representation of a stack (or queue)
+ * @n: integer
+ * @prev: points to the previous element of the stack (or queue)
+ * @next: points to the next element of the stack (or queue)
+ *
+ * Description: doubly linked list node structure
+ * for stack, queues, LIFO, FIFO
+ */
+typedef struct stack_s
+{
+        int n;
+        struct stack_s *prev;
+        struct stack_s *next;
+} stack_t;
+```
+
+<br>
+<br>
+
+```yaml
+/**
+ * struct instruction_s - opcode and its function
+ * @opcode: the opcode
+ * @f: function to handle the opcode
+ *
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO
+ */
+typedef struct instruction_s
+{
+        char *opcode;
+        void (*f)(stack_t **stack, unsigned int line_number);
+} instruction_t;
+```
+
+<br>
+<br>
+
+### Compilation & Output:
+
+<br>
+
+- Your code will be compiled this way:
+
+<br>
+
+```yaml
+$ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
+```
+
+<br>
+
+- Any output must be printed on `stdout`.
+
+- Any error message must be printed on `stderr`
+  - [Here is a link to a GitHub repository](https://github.com/ku1ik/stderred) that could help you making sure your errors are printed on `stderr`.
+
+<br>
+<br>
+
+### Tests:
+
+<br>
+
+- We strongly encourage you to work all together on a set of tests.
+
+<br>
+<br>
+
+### The Monty language:
+
+<br>
+
+- `Monty 0.98` is a scripting language that is first compiled into `Monty ByteCodes` (Just like `Python`). <br>
+It relies on a unique stack, with specific instructions to manipulate it. <br>
+
+- The goal of this project is to create an interpreter for `Monty ByteCodes` files.
+
+<br>
+<br>
+
+#### Monty byte code files:
+
+<br>
+
+- Files containing Monty ByteCodes usually have the `.m` extension. <br>
+Most of the industry uses this standard but it is not required by the specification of the language. <br>
+
+- There is not more than one instruction per line.
+
+<br>
+
+- There can be any number of spaces before or after the opcode and its argument:
+
+<br>
+
+```yaml
+julien@ubuntu:~/monty$ cat -e bytecodes/000.m
 push 0$
 push 1$
 push 2$
@@ -27,12 +314,19 @@ push 4$
     push 5    $
       push    6        $
 pall$
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$
-</code></pre>
+julien@ubuntu:~/monty$
+```
 
-<p>Monty byte code files can contain blank lines (empty or made of spaces only, and any additional text after the opcode or its required argument is not taken into account:</p>
+<br>
+<br>
 
-<pre><code>julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ cat -e bytecodes/001.m
+- Monty ByteCodes files can contain blank lines <br>
+(empty or made of spaces only, and any additional text after the opcode or its required argument is not taken into account):
+
+<br>
+
+```yaml
+julien@ubuntu:~/monty$ cat -e bytecodes/001.m
 push 0 Push 0 onto the stack$
 push 1 Push 1 onto the stack$
 $
@@ -48,234 +342,93 @@ $
       push    6        $
 $
 pall This is the end of our program. Monty is awesome!$
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$
-</code></pre>
+julien@ubuntu:~/monty$
+```
 
-<p><strong>The monty program</strong></p>
+<br>
+<br>
 
-<ul>
-<li>Usage: <code>monty file</code></li>
-<li>where <code>file</code> is the path to the file containing Monty byte code</li>
-<li>If the user does not give any file or more than one argument to your program, print <code>USAGE: monty file</code>, followed by a new line, and exit with the status <code>EXIT_FAILURE</code></li>
-<li>If, for any reason, it&#39;s not possible to use read the file, print <code>Error: Can&#39;t open file &lt;file&gt;</code>, followed by a new line, and exit with the status <code>EXIT_FAILURE</code>
+#### The monty program:
 
-<ul>
-<li>where <code>&lt;file&gt;</code> is the name of the file</li>
-</ul></li>
-<li>If the file contains an invalid instruction, print <code>L&lt;line_number&gt;: unknown instruction &lt;opcode&gt;</code>, followed by a new line, and exit with the status <code>EXIT_FAILURE</code>
+<br>
 
-<ul>
-<li>where <line_number> is the line number where the instruction appears. Line numbers always start at 1</li>
-</ul></li>
-<li>The monty program runs the bytecodes line by line and stop if:
+- Usage: `monty file`
+    - where `file` is the path to the file containing Monty ByteCode.
 
-<ul>
-<li>it executed properly every line of the file</li>
-<li>or it finds an error in the file</li>
-<li>or an error occured</li>
-</ul></li>
-<li>If you can&#39;t malloc anymore, print <code>Error: malloc failed</code>, followed by a new line, and exit with status <code>EXIT_FAILURE</code>. You have to use <code>malloc</code> and <code>free</code> and are not allowed to use any other function from <code>man malloc</code></li>
-</ul>
+<br>
 
-<p><strong>The push opcode</strong></p>
+- If the user does not give any file or more than one argument to your program, print the error message `USAGE: monty file`, followed by a new line, and exit with the status `EXIT_FAILURE`.
 
-<p>The opcode <code>push</code> pushes an element to the stack.</p>
+<br>
 
-<ul>
-<li>Usage: <code>push &lt;int&gt;</code></li>
-<li>where <code>&lt;int&gt;</code> is an integer</li>
-<li>if <code>&lt;int&gt;</code> is not an integer or if there is no argument to <code>push</code>, print the message <code>L&lt;line_number&gt;: usage: push integer</code>, followed by a new line, and exit with the status <code>EXIT_FAILURE</code>
+- If, for any reason, it’s not possible to open the file, print the error message `Error: Can't open file <file>`, followed by a new line, and exit with the status `EXIT_FAILURE`
+  - where `<file>` is the name of the file.
 
-<ul>
-<li>where <line_number> is the line number in the file</li>
-</ul></li>
-<li>You don&#39;t have to deal with overflows. Use the <code>atoi</code> function</li>
-</ul>
+<br>
 
-<p><strong>The pall opcode</strong></p>
+- If the file contains an invalid instruction, print the error message `L<line_number>: unknown instruction <opcode>`, followed by a new line, and exit with the status `EXIT_FAILURE`
+  - where is the line number where the instruction appears.
+  - Line numbers always start at 1.
 
-<p>The opcode <code>pall</code> prints all the values on the stack, starting from the top of the stack.</p>
+<br>
 
-<ul>
-<li>Usage <code>pall</code></li>
-<li>Format: see example</li>
-<li>If the stack is empty, don&#39;t print anything</li>
-</ul>
+- The monty program runs the bytecodes line by line and stop if either:
+  - it executed properly every line of the file
+  - it finds an error in the file
+  - an error occured.
 
-<pre><code>julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ cat -e bytecodes/00.m
-push 1$
-push 2$
-push 3$
-pall$
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ ./monty bytecodes/00.m
-3
-2
-1
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$
-</code></pre>
+<br>
 
-  <h4 class="task">
-    1. pint
-      <span class="alert alert-warning mandatory-optional">
-        mandatory
-      </span>
-  </h4>
+- If you can’t malloc anymore, print the error message `Error: malloc failed`, followed by a new line, and exit with status `EXIT_FAILURE`.
 
+- You have to use `malloc` and `free` and are not allowed to use any other function from `man malloc` (`realloc`, `calloc`, …).
 
-  <!-- Progress vs Score -->
+<br>
+<br>
 
-<!-- Task Body -->
-  <p>Implement the <code>pint</code> opcode.</p>
+<!-- ------------------------------------------------------------------------------------------------- -->
 
-<p><strong>The pint opcode</strong></p>
+## :mag_right: Resources
 
-<p>The opcode <code>pint</code> prints the value at the top of the stack, followed by a new line.</p>
+<br>
 
-<ul>
-<li>Usage: <code>pint</code></li>
-<li>If the stack is empty, print <code>L&lt;line_number&gt;: can&#39;t pint, stack empty</code>, followed by a new line, and exit with the status <code>EXIT_FAILURE</code></li>
-</ul>
+**_Do you need some help?_**
 
-<pre><code>julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ cat bytecodes/06.m 
-push 1
-pint
-push 2
-pint
-push 3
-pint
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ ./monty bytecodes/06.m 
-1
-2
-3
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ 
-</code></pre>
+<br>
 
-  <h4 class="task">
-    2. pop
-      <span class="alert alert-warning mandatory-optional">
-        mandatory
-      </span>
-  </h4>
+**Read or watch:**
 
+* [Google](https://www.google.com/webhp?q=stack%20and%20queue)
 
-  <!-- Progress vs Score -->
+* [How do I use extern to share variables between source files in C?](https://stackoverflow.com/questions/1433204/how-do-i-use-extern-to-share-variables-between-source-files)
 
-<!-- Task Body -->
-  <p>Implement the <code>pop</code> opcode.</p>
+<br>
+<br>
 
-<p><strong>The pop opcode</strong></p>
+<!-- ------------------------------------------------------------------------------------------------- -->
 
-<p>The opcode <code>pop</code> removes the top element of the stack.</p>
+## :bust_in_silhouette: Authors
 
-<ul>
-<li>Usage: <code>pop</code></li>
-<li>if the stack is empty, print <code>L&lt;line_number&gt;: can&#39;t pop an empty stack</code>, followed by a new line, and exit with the status <code>EXIT_FAILURE</code></li>
-</ul>
+<br>
 
-<pre><code>julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ cat bytecodes/07.m 
-push 1
-push 2
-push 3
-pall
-pop
-pall
-pop
-pall
-pop
-pall
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ ./monty bytecodes/07.m 
-3
-2
-1
-2
-1
-1
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ 
-</code></pre>
+**${\color{blue}Noémie \space Pham}$** ---> `Github` : [Noémie Huynh](https://github.com/noemiepham)
 
-  <h4 class="task">
-    3. swap
-      <span class="alert alert-warning mandatory-optional">
-        mandatory
-      </span>
-  </h4>
+**${\color{blue}Razika \space Bengana}$**
 
+<br>
+<br>
 
-  <!-- Progress vs Score -->
+<!-- ------------------------------------------------------------------------------------------------- -->
 
-<!-- Task Body -->
-  <p>Implement the <code>swap</code> opcode.</p>
+## :octocat: License
 
-<p><strong>The swap opcode</strong></p>
+<br>
 
-<p>The opcode <code>swap</code> swaps the top two elements of the stack.</p>
+```C - stacks, Queues - LIFO, FIFO``` _project has no license specified._
 
-<ul>
-<li>Usage: <code>swap</code></li>
-<li>If the stack is less than two element long, print <code>L&lt;line_number&gt;: can&#39;t swap, stack too short</code>, followed by a new line, and exit with the status <code>EXIT_FAILURE</code></li>
-</ul>
+<br>
+<br>
 
-<pre><code>julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ cat bytecodes/09.m 
-push 1
-push 2
-push 3
-pall
-swap
-pall
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ ./monty bytecodes/09.m 
-3
-2
-1
-2
-3
-1
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ 
-</code></pre>
+---
 
-  <h4 class="task">
-    4. add
-      <span class="alert alert-warning mandatory-optional">
-        mandatory
-      </span>
-  </h4>
-
-
-  <!-- Progress vs Score -->
-
-<!-- Task Body -->
-  <p>Implement the <code>add</code> opcode.</p>
-
-<p><strong>The add opcode</strong></p>
-
-<p>The opcode <code>add</code> adds the top two elements of the stack.</p>
-
-<ul>
-<li>Usage: <code>add</code></li>
-<li>If the stack is less than two element long, print <code>L&lt;line_number&gt;: can&#39;t add, stack too short</code>, followed by a new line, and exit with the status <code>EXIT_FAILURE</code></li>
-<li>The result is stored in the second top element of the stack, and the top element is removed, so that at the end:
-
-<ul>
-<li>the top element of the stack contains the result</li>
-<li>the stack is one element shorter</li>
-</ul></li>
-</ul>
-
-<pre><code>julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ cat bytecodes/12.m 
-push 1
-push 2
-push 3
-pall
-add
-pall
-
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$ ./monty bytecodes/12.m 
-3
-2
-1
-5
-1
-julien@ubuntu:~/0x18. Stack (LIFO) &amp; queue (FIFO)$
-</code></pre>
-
-  <h4 class="task">
-   
+<p align="center"><br>2022</p>
