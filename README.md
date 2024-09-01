@@ -1,7 +1,7 @@
 <div align="center">
 <br>
 
-![Monty.png](README-images/monty.png)
+![Monty.png](README-image/monty.png)
 
 </div>
 
