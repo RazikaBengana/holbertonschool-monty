@@ -44,7 +44,7 @@
 
 <div align="center">
 
-**`C - stacks, Queues - LIFO, FIFO`** project is a collaborative group assignment that involves creating a stack-based interpreter for `Monty ByteCodes` files.
+**`C - stacks, queues - LIFO, FIFO`** project is a collaborative group assignment that involves creating a stack-based interpreter for `Monty ByteCodes` files.
 <br>
 It requires to implement a program that can read and execute various stack operations like `push`, `pop`, `swap`, and arithmetic operations defined in Monty ByteCodes instructions.
 <br>
@@ -424,7 +424,7 @@ julien@ubuntu:~/monty$
 
 <br>
 
-```C - stacks, Queues - LIFO, FIFO``` _project has no license specified._
+```C - stacks, queues - LIFO, FIFO``` _project has no license specified._
 
 <br>
 <br>
