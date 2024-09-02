@@ -51,7 +51,7 @@ It requires to implement a program that can read and execute various stack opera
 The project challenges to handle error conditions, manage memory efficiently, and work with linked list data structures to represent and manipulate the stack.
 <br>
 <br>
-This project has been created by **[Holberton School](https://www.holbertonschool.com/about-holberton)** to enable every student to understand how `Stacks` & `Queues` in C language work.
+This project has been created by **[Holberton School](https://www.holbertonschool.com/about-holberton)** to enable every student to understand how `stacks` & `queues` in C language work.
 
 </div>
 
