@@ -109,7 +109,7 @@ This project has been created by **[Holberton School](https://www.holbertonschoo
 
 <!-- ------------------------------------------------------------------------------------------------- -->
 
-## :memo: Learning objectives
+## :memo: Learning Objectives
 
 <br>
 
@@ -205,7 +205,7 @@ If you clone/fork/whatever a project repository with the same name before the se
 
 <br>
 
-```yaml
+```c
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -226,7 +226,7 @@ typedef struct stack_s
 <br>
 <br>
 
-```yaml
+```c
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -411,9 +411,11 @@ julien@ubuntu:~/monty$
 
 <br>
 
-**${\color{blue}Noémie \space Pham}$** ---> `Github` : [Noémie Huynh](https://github.com/noemiepham)
+- `Noémie Pham` &nbsp; :point_right: `Github` : [Noémie Huynh](https://github.com/noemiepham)
 
-**${\color{blue}Razika \space Bengana}$**
+<br>
+
+- `Razika Bengana`
 
 <br>
 <br>
